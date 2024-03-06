@@ -11,7 +11,7 @@ export function CreateTask() {
     const { isCreateTaskOpen, setIsCreateTaskOpen, category } =
         useContext(BottomSheetContext);
     const bottomSheetRef = useRef(null);
-    const snapPoints = useMemo(() => ["40%"], []);
+    const snapPoints = useMemo(() => ["70%"], []);
     //   const openBottomSheet = () => bottomSheetRef.current?.expand();
     const handleCloseAction = () => {
         setTitle()
@@ -39,12 +39,24 @@ export function CreateTask() {
     const [description, setDescription] = useState()
     const [date, setDate] = useState()
 
+    const chooseButtonText = () => {
+        if (category == "Personal") {
+            return buttonTextPersonal
+        } else if (category == "Professional") {
+            return buttonTextProfessional
+        } else if (category == "Academic") {
+            return buttonTextAcademic
+        } else if (category == "Social") {
+            return buttonTextSocial
+        }
+    }
+
     return (
-        <>
+        <> 
             {isCreateTaskOpen && (
                 <BottomSheet index={0} ref={bottomSheetRef} snapPoints={snapPoints} style={styles.container}>
                     <View style={styles.arrowBackContainer} onTouchEnd={handleCloseAction}>
-                        <ArrowBackIcon />
+                        <ArrowBackIcon category={category}/>
                     </View>
 
                     <View style={styles.inputTitle}>

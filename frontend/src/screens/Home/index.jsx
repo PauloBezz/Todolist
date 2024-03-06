@@ -7,18 +7,17 @@ import { AllTasks } from "../../components/AllTasks"
 import { First } from '../First/index'
 import { Second } from '../Second/index'
 import { Three } from '../Three/index'
+import { SafeAreaView } from "react-native-safe-area-context"
 
 export function Home({ navigation }) {
     return (
-        <View style={styles.container}>
-            <Head />
-            <Categories navigation={navigation} />
-            {/* <First/>
-            <Second/>
-            <Three/> */}
-            <AllTasks />
-            <CreateTaskButton />
-        </View>
+
+            <View style={styles.container}>
+                <Head navigation={navigation}/>
+                <Categories navigation={navigation} />
+                <AllTasks />
+                <CreateTaskButton />
+            </View>
     )
 }
 
@@ -27,7 +26,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         backgroundColor: '#fff',
-        paddingTop: 90,
+        paddingTop: 20,
         paddingHorizontal: 35,
         gap: 40
     },

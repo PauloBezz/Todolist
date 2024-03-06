@@ -1,5 +1,5 @@
 import axios from 'axios'
-const ip = "192.168.0.104"
+const ip = "172.16.1.159"
 const apiPort = "5500"
 
 const api = axios.create({

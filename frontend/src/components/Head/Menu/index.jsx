@@ -3,7 +3,7 @@ import { styles } from "./styles";
 import { Sidebar } from "../../Sidebar";
 import { useState } from "react";
 
-export function Menu() {
+export function Menu({navigation}) {
 
     const [sidebarOpen, setSidebarOpen] = useState(false)
 
@@ -21,7 +21,7 @@ export function Menu() {
                 </View>
 
             </View>
-            <Sidebar name={"Atila"} isOpen={sidebarOpen} setIsOpen={setSidebarOpen}/>
+            <Sidebar navigation={navigation} name={"Atila"} isOpen={sidebarOpen} setIsOpen={setSidebarOpen}/>
         </>
     )
 }

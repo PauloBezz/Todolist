@@ -4,7 +4,7 @@ import { styles } from "./styles";
 import { Notifications } from './Notifications';
 import { Menu } from './Menu';
 
-export function Head() {
+export function Head({navigation}) {
     return (
         <View style={styles.container}>
             <View>
@@ -17,7 +17,7 @@ export function Head() {
                     <Notifications />
                 </View>
 
-                <Menu />
+                <Menu navigation={navigation}/>
             </View>
         </View>
     )

@@ -15,7 +15,7 @@ export function ChooseCategory() {
   const { isBottomSheetOpen, setIsBottomSheetOpen, setIsCreateTaskOpen, setCategory } =
     useContext(BottomSheetContext);
   const bottomSheetRef = useRef(null);
-  const snapPoints = useMemo(() => ["40%"], []);
+  const snapPoints = useMemo(() => ["70%"], []);
   //   const openBottomSheet = () => bottomSheetRef.current?.expand();
   const handleCloseAction = () => {
     bottomSheetRef.current?.close();

@@ -4,11 +4,14 @@ import image from '../../../assets/calendar.png'
 import { useState } from "react";
 import Loading from "../../components/Loading/index";
 
-export function Three() {
+export function Three({navigation}) {
   const [visible, setVisible] = useState(false);
 
     function Logar(){
         setVisible(true);
+        setTimeout(() =>{
+            navigation.navigate("Home")
+        }, 2500)
         setTimeout(() => {
             setVisible(false);
             console.log('Entrando na home')

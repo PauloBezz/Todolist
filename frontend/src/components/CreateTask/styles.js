@@ -37,7 +37,20 @@ export const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 10
     },
-    buttonText: {
+    buttonTextPersonal: {
+        fontWeight: 'bold',
+        fontSize: 18,
+        color: "#ff8657"
+    },
+    buttonTextProfessional: {
+        fontWeight: 'bold',
+        fontSize: 18
+    },
+    buttonTextAcademic: {
+        fontWeight: 'bold',
+        fontSize: 18
+    },
+    buttonTextSocial: {
         fontWeight: 'bold',
         fontSize: 18
     },

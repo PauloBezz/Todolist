@@ -46,10 +46,6 @@ export function EditOrange(){
 
         </View>
         </BottomSheet>
-
-
-
-
         </View>
       </GestureHandlerRootView>
     )
@@ -74,7 +70,7 @@ export function EditBlue(){
 export function EditYellow(){
     return(
         <TouchableOpacity>
-        <PenIconGray/>
+        <PenIconYellow/>
     </TouchableOpacity>
 )
 }

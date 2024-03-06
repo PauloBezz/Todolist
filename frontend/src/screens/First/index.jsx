@@ -2,8 +2,9 @@ import { Text, View ,Image, Button} from "react-native";
 import { styles } from "./style"
 import image from '../../../assets/montain.png'
 
-export function First() {
+export function First({navigation}) {
     return (
+        
         <View style={styles.container}>
             <Text style={styles.nameApp}>Do It</Text>
             <Image source={image} />

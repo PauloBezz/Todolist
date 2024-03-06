@@ -2,7 +2,7 @@ import { Text, View ,Image, TouchableOpacity} from "react-native";
 import { styles } from "./style.js"
 import image from '../../../assets/ilustration.png'
 
-export function Second(){
+export function Second({navigation}){
     return(
         <View style={styles.container}> 
             <Image style={styles.image} source={image} />
@@ -13,7 +13,7 @@ export function Second(){
                 <View style= {styles.circleTwo}/>
                 <View style= {styles.circleThree}/>
             </View>
-            <TouchableOpacity style= {styles.button} onPress={() => alert('Botão Pressionado')}> 
+            <TouchableOpacity style= {styles.button} onPress= {() => navigation.navigate('Three')}> 
                 <Text style={styles.buttonText}>Avançar</Text>
             </TouchableOpacity>
 

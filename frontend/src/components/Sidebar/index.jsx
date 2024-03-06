@@ -35,29 +35,29 @@ export function Sidebar(props) {
                             </View>
 
                             <View style={styles.lista}>
-                                <TouchableOpacity style={styles.guide}>
+                                <TouchableOpacity onPress={()=> props.setIsOpen(false)}style={styles.guide}>
                                     <Text style={styles.listAll}>All</Text>
                                     <View><Text style={styles.data}>40</Text></View>
                                 </TouchableOpacity>
 
                                 <View style={styles.line} />
 
-                                <TouchableOpacity style={styles.guide}>
+                                <TouchableOpacity onPress={()=>props.navigation.navigate("Personal") || props.setIsOpen(false)} style={styles.guide}>
                                     <Text style={styles.list}>Personal</Text>
                                     <View style={styles.recOne}><Text style={styles.dado}>11</Text></View>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.guide}>
+                                <TouchableOpacity  onPress={()=>props.navigation.navigate("Professional") || props.setIsOpen(false)} style={styles.guide}>
                                     <Text  style={styles.list}>Professional</Text>
                                     <View style={styles.recTwo}><Text style={styles.dado}>8</Text></View>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.guide}>
+                                <TouchableOpacity  onPress={()=>props.navigation.navigate("Academic") || props.setIsOpen(false)}style={styles.guide}>
                                     <Text style={styles.list}>Academic</Text>
                                     <View style={styles.recThree}><Text style={styles.dado}>5</Text></View>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.guide}>
+                                <TouchableOpacity onPress={()=>props.navigation.navigate("Social") || props.setIsOpen(false)} style={styles.guide}>
                                     <Text style={styles.list}>Social</Text>
                                     <View style={styles.recFour}><Text style={styles.dado}>16</Text></View>
                                 </TouchableOpacity>
